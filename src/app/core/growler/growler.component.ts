@@ -51,6 +51,7 @@ export class GrowlerComponent implements OnInit {
         this.growls.splice(index, 1);
         this.growlCount--;
         console.log('removed ' + id);
+       
       }
     });
   }

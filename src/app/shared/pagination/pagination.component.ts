@@ -12,6 +12,7 @@ export class PaginationComponent implements OnInit {
   private pagerPageSize: number;
 
   totalPages: number;
+  subsection:number;
   pages: number[] = [];
   currentPage = 1;
   isVisible = false;
@@ -47,6 +48,7 @@ export class PaginationComponent implements OnInit {
   update() {
     if (this.pagerTotalItems && this.pagerPageSize) {
       this.totalPages = Math.ceil(this.pagerTotalItems / this.pageSize);
+      // this.subsection=this.totalPages%2==0 ? this.totalPages/2 :  (this.totalPages/2) + 1 ;
       this.isVisible = true;
       if (this.totalItems >= this.pageSize) {
         for (let i = 1; i < this.totalPages + 1; i++) {
